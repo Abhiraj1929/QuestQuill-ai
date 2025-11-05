@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET(request, { params }) {
   try {
     await mongodb();
-    const { id } = await params;
+    const { id } = params;
 const threads = await Thread.findOne({ id: id });
     if (!threads) {
       return NextResponse.json(
