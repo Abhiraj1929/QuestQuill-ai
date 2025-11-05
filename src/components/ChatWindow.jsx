@@ -10,7 +10,7 @@ export default function ChatWindow() {
   const [loading, setLoading] = useState(false);
   const lastSentPromptRef = useRef("");
 
-  const endpoint = "http://localhost:3000/api/chat";
+  const endpoint = "/api/chat";
 
   const getReply = async () => {
     if (loading) return;
