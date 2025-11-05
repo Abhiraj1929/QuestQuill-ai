@@ -6,11 +6,6 @@ import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 
-/**
- * Chat UI — ChatGPT-like look & feel; JavaScript-only (.jsx) version.
- * - Keeps your existing logic for newChat/prevChats/reply & typing animation.
- * - Adds avatars, bubbles, markdown/code polish, and auto-scroll.
- */
 
 function Avatar({ role }) {
   const isUser = role === "user";

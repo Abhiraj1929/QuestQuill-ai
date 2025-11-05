@@ -10,7 +10,7 @@ export default function ChatWindow() {
   const [loading, setLoading] = useState(false);
   const lastSentPromptRef = useRef("");
 
-  const endpoint = "/api/chat";
+
 
   const getReply = async () => {
     if (loading) return;
@@ -21,7 +21,7 @@ export default function ChatWindow() {
 
     try {
       setLoading(true);
-      const response = await fetch(endpoint, {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" }, // <-- headers (plural)
         body: JSON.stringify({
